@@ -10,7 +10,7 @@ Install Motorola's CPS 16.0.828.0 from their website.
 
 ## Patching
 Open dnSpy and use it to open C:\Program Files (x86)\Motorola CPS\CommonLib.dll
-Double click PasswordStatus under CommonLib -> CommonLib.dll -> Motorola.Common.Communication.CommonUtil (listing is shown below but is truncated)
+Double click PasswordStatus under CommonLib -> CommonLib.dll -> Motorola.Common.Communication.CommonUtil -> PasswordStatus (listing is shown below but is truncated)
 
 ![Listing](CommonLibListing.PNG)
 
