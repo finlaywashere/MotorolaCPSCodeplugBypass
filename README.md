@@ -1,6 +1,6 @@
 # Motorola CPS Password Bypass Patch
 
-These instructions will walk you through how to patch Motorola CPS 16.0.828.0 to bypass all codeplug password restrictions.
+These instructions will walk you through how to patch Motorola CPS 16.0.828.0 and CPS 2.146.122.0 to bypass all codeplug password restrictions.
 It may work for other versions but hasn't been tested.
 
 ## Pre-Requisite Requirements
@@ -23,6 +23,17 @@ Right click and press "Edit Method (C#)"
 Replace the getter method with "return true;" (to match the function shown below)
 
 ![IsPasswordValidationSuccess After Modification](PasswordStatus_after.PNG)
+
+## CPS 2.0
+
+For CPS 2.0 follow the above instructions and then these additional steps:
+
+Open C:\Program Files (x86)\Motorola CPS\Common.Communication.IshHandler.dll
+Double click PasswordStatusResponse under Common.Communication.IshHandler.dll -> Motorola.Common.Communication.IshHandler -> PasswordStatusResponse
+
+Edit scroll to the VerifyPasswordStatus and edit it (per instructions above) to just read "this.f = true;"
+
+## Recompile
 
 Press "Compile"
 
