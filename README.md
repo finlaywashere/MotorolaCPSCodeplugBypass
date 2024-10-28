@@ -10,6 +10,7 @@ Install Motorola's CPS 16.0.828.0 from their website.
 
 ## Patching
 Open dnSpy and use it to open C:\Program Files (x86)\Motorola CPS\CommonLib.dll
+
 Double click PasswordStatus under CommonLib -> CommonLib.dll -> Motorola.Common.Communication.CommonUtil -> PasswordStatus (listing is shown below but is truncated)
 
 ![Listing](CommonLibListing.PNG)
@@ -29,6 +30,7 @@ Replace the getter method with "return true;" (to match the function shown below
 For CPS 2.0 follow the above instructions and then these additional steps:
 
 Open C:\Program Files (x86)\Motorola CPS\Common.Communication.IshHandler.dll
+
 Double click PasswordStatusResponse under Common.Communication.IshHandler.dll -> Motorola.Common.Communication.IshHandler -> PasswordStatusResponse
 
 Edit scroll to the VerifyPasswordStatus and edit it (per instructions above) to just read "this.f = true;"
